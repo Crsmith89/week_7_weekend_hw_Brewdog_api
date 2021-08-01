@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import BeerList from '../components/BeerList';
 import BeerDetail from '../components/BeerDetail';
+import BeerSelector from '../components/BeerSelector';
 import './BeerContainer.css';
 
 // Beers set as an empty array, "Beer List.map" don't know the length of fetch. null would break on beer list. truthy / falsy allows null selected beer.  
@@ -27,9 +28,14 @@ const BeerContainer = () => {
 
 
 // Passing through beers through this component, beer list,  
+    const onBeerSelected = function(beer){  
+        setSelectedBeer(beer)    
+    }
     return (
         <div className="main-container">
-            <BeerList beers={beers} onBeerClick={(beer) => onBeerClickContainer(beer)}/>
+            <BeerSelector beer={beers} onBeerSelected={onBeerSelected}/>
+            {/* <BeerList beer={beers} onBeerSelected={onBeerSelected}/>
+            <BeerList beers={beers} onBeerClick={(beer) => onBeerClickContainer(beer)}/> */}
             <BeerDetail beer={selectedBeer}/> 
                 
 

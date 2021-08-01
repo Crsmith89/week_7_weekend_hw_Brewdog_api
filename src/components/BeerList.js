@@ -1,18 +1,18 @@
-import ListItem from './ListItem';
+// import ListItem from './ListItem';
 
-const BeerList = ({beers, onBeerClick}) => {
+// const BeerList = ({beers, onBeerClick}) => {
 
-    const beerItems = beers.map((beer, index) => {
-        return <ListItem beer={beer} key={index} onBeerClick={onBeerClick}/>
-    })
+//     const beerItems = beers.map((beer, index) => {
+//         return <ListItem beer={beer} key={index} onBeerClick={onBeerClick}/>
+//     })
 
-    return (
-        <div>
-            <ul>
-                {beerItems}
-            </ul>
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <ul>
+//                 {beerItems}
+//             </ul>
+//         </div>
+//     )
+// }
 
-export default BeerList; 
+// export default BeerList; 
