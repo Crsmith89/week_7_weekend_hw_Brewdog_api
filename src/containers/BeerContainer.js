@@ -30,7 +30,8 @@ const BeerContainer = () => {
     return (
         <div className="main-container">
             <BeerList beers={beers} onBeerClick={(beer) => onBeerClickContainer(beer)}/>
-            <BeerDetail />       
+            <BeerDetail beer={selectedBeer}/> 
+                
 
         </div>
     )
